@@ -58,6 +58,24 @@ private extension FactViewController {
         tableview.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
     
+    private func setUpViewModel() {
+        if self.viewModel == nil {
+            self.viewModel = FactsViewModel.init()
+        }
+    }
+    
+    private func reloadTheTableView() {
+        if let viewModel = self.viewModel {
+            viewModel.reloadListClosure = { [weak self] () in
+                guard let weakSelf = self else {return}
+                DispatchQueue.main.async {
+                    weakSelf.titleName =  viewModel.getHeaderTitle()
+                    weakSelf.tableview.reloadData()
+                }
+            }
+        }
+    }
+    
     private func addBarButtonToNavigation() {
 
         let refreshButton = UIBarButtonItem(title: "refresh", style: .plain, target: self, action: #selector(refreshFactApi))
@@ -65,27 +83,30 @@ private extension FactViewController {
         self.navigationItem.rightBarButtonItem  = refreshButton
     }
     
+    
 }
 
  extension FactViewController: UITableViewDataSource, UITableViewDelegate {
     //MARK:- Internal Methods
     
-    //MARK:- Configuere Screen On Load
+    // Configuere Screen On Load
     func configureScreenOnLoad() {
         self.setNavgBarApperance(self)
         self.title = NSLocalizedString("Facts", comment: "")
     }
     
-    //MARK:- Configuere Screen After Load
+    // Configuere Screen After Load
     func configureScreenAfterLoad() {
         self.configureTableView()
+        self.setUpViewModel()
+        self.reloadTheTableView()
         self.addBarButtonToNavigation()
     }
     
-    //MARK:- Selector Methods
     @objc func refreshFactApi() {
-        
+        self.viewModel?.refreshFactApi()
     }
+    
     
     // MARK: - Table view data source
      func numberOfSections(in tableView: UITableView) -> Int {
@@ -95,7 +116,7 @@ private extension FactViewController {
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return self.viewModel?.numberOfFactsCount() ?? 0
     }
     
     
@@ -103,6 +124,11 @@ private extension FactViewController {
         guard let factCell = self.tableview.dequeueReusableCell(withIdentifier: self.cellReuseIdentifier, for: indexPath) as? FactTableViewCell else {
             fatalError("cell Not found")
         }
+        // Configure the cell...
+        factCell.selectionStyle = .none
+        factCell.imgeView.image = UIImage.init(named: "placeholder")
+        factCell.titleLabel.text = self.viewModel?.getFactsDetailsTitle(indexPath.row)
+        factCell.descriptionLabel.text = self.viewModel?.getFactsDetailsDesc(indexPath.row)
         
         return factCell
     }
