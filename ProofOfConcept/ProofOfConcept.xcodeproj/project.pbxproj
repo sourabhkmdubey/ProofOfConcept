@@ -12,6 +12,17 @@
 		F80F89192747F791009520F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F80F89172747F791009520F3 /* LaunchScreen.storyboard */; };
 		F80F89242747F791009520F3 /* ProofOfConceptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F89232747F791009520F3 /* ProofOfConceptTests.swift */; };
 		F80F892F2747F791009520F3 /* ProofOfConceptUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F892E2747F791009520F3 /* ProofOfConceptUITests.swift */; };
+		F80F894E2748096A009520F3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F894C2748096A009520F3 /* BaseViewController.swift */; };
+		F80F894F2748096A009520F3 /* FactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F894D2748096A009520F3 /* FactViewController.swift */; };
+		F80F895427480A61009520F3 /* FactTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F895027480A61009520F3 /* FactTableViewCellProtocol.swift */; };
+		F80F895527480A61009520F3 /* FactViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F895127480A61009520F3 /* FactViewControllerProtocol.swift */; };
+		F80F895627480A61009520F3 /* NavigationBarApperanceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F895227480A61009520F3 /* NavigationBarApperanceProtocol.swift */; };
+		F80F895727480A61009520F3 /* ScreenProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F895327480A61009520F3 /* ScreenProtocol.swift */; };
+		F80F895927480B92009520F3 /* FactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F895827480B92009520F3 /* FactsViewModel.swift */; };
+		F80F895B27480BBA009520F3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F895A27480BBA009520F3 /* BaseViewModel.swift */; };
+		F80F895E27480C34009520F3 /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F895C27480C34009520F3 /* BaseViewModelProtocol.swift */; };
+		F80F895F27480C34009520F3 /* FactsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F895D27480C34009520F3 /* FactsViewModelProtocol.swift */; };
+		F80F896127480D63009520F3 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F896027480D63009520F3 /* BookTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +54,17 @@
 		F80F892A2747F791009520F3 /* ProofOfConceptUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProofOfConceptUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80F892E2747F791009520F3 /* ProofOfConceptUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProofOfConceptUITests.swift; sourceTree = "<group>"; };
 		F80F89302747F791009520F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F80F894C2748096A009520F3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F80F894D2748096A009520F3 /* FactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactViewController.swift; sourceTree = "<group>"; };
+		F80F895027480A61009520F3 /* FactTableViewCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactTableViewCellProtocol.swift; sourceTree = "<group>"; };
+		F80F895127480A61009520F3 /* FactViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactViewControllerProtocol.swift; sourceTree = "<group>"; };
+		F80F895227480A61009520F3 /* NavigationBarApperanceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarApperanceProtocol.swift; sourceTree = "<group>"; };
+		F80F895327480A61009520F3 /* ScreenProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenProtocol.swift; sourceTree = "<group>"; };
+		F80F895827480B92009520F3 /* FactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewModel.swift; sourceTree = "<group>"; };
+		F80F895A27480BBA009520F3 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		F80F895C27480C34009520F3 /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
+		F80F895D27480C34009520F3 /* FactsViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsViewModelProtocol.swift; sourceTree = "<group>"; };
+		F80F896027480D63009520F3 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +193,8 @@
 		F80F89422747FD98009520F3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F80F894C2748096A009520F3 /* BaseViewController.swift */,
+				F80F894D2748096A009520F3 /* FactViewController.swift */,
 				F80F89442747FDB4009520F3 /* Views */,
 			);
 			path = Screens;
@@ -179,6 +203,10 @@
 		F80F89432747FD9F009520F3 /* ScreenProtocols */ = {
 			isa = PBXGroup;
 			children = (
+				F80F895027480A61009520F3 /* FactTableViewCellProtocol.swift */,
+				F80F895127480A61009520F3 /* FactViewControllerProtocol.swift */,
+				F80F895227480A61009520F3 /* NavigationBarApperanceProtocol.swift */,
+				F80F895327480A61009520F3 /* ScreenProtocol.swift */,
 			);
 			path = ScreenProtocols;
 			sourceTree = "<group>";
@@ -186,6 +214,7 @@
 		F80F89442747FDB4009520F3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F80F896027480D63009520F3 /* BookTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +229,8 @@
 		F80F89462747FDD3009520F3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F80F895A27480BBA009520F3 /* BaseViewModel.swift */,
+				F80F895827480B92009520F3 /* FactsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -207,6 +238,8 @@
 		F80F89472747FDE5009520F3 /* ViewModelProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				F80F895C27480C34009520F3 /* BaseViewModelProtocol.swift */,
+				F80F895D27480C34009520F3 /* FactsViewModelProtocol.swift */,
 			);
 			path = ViewModelProtocol;
 			sourceTree = "<group>";
@@ -368,7 +401,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80F894F2748096A009520F3 /* FactViewController.swift in Sources */,
+				F80F895427480A61009520F3 /* FactTableViewCellProtocol.swift in Sources */,
+				F80F895727480A61009520F3 /* ScreenProtocol.swift in Sources */,
+				F80F895527480A61009520F3 /* FactViewControllerProtocol.swift in Sources */,
+				F80F896127480D63009520F3 /* BookTableViewCell.swift in Sources */,
+				F80F895927480B92009520F3 /* FactsViewModel.swift in Sources */,
+				F80F895E27480C34009520F3 /* BaseViewModelProtocol.swift in Sources */,
+				F80F895F27480C34009520F3 /* FactsViewModelProtocol.swift in Sources */,
+				F80F895B27480BBA009520F3 /* BaseViewModel.swift in Sources */,
+				F80F895627480A61009520F3 /* NavigationBarApperanceProtocol.swift in Sources */,
 				F80F890D2747F78F009520F3 /* AppDelegate.swift in Sources */,
+				F80F894E2748096A009520F3 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
