@@ -11,6 +11,7 @@ final class FactsViewModel: BaseViewModel, FactsViewModelProtocol {
     
     //MARK:- Vars
     let queue = DispatchQueue.global(qos: .userInitiated)
+    var downloadManager: DownloadManagerImage?
     var factsApiService: FactsApiServicesProtocol?
     var factData: Facts?
     var reloadListClosure: ReloadClosure = { () in
@@ -21,6 +22,7 @@ final class FactsViewModel: BaseViewModel, FactsViewModelProtocol {
     override init() {
         super.init()
         self.factsApiService = FactsApiServices.init();
+        self.downloadManager = DownloadManagerImage.init()
         self.callFactsApi()
     }
     
@@ -62,7 +64,7 @@ internal extension FactsViewModel {
                         }
                     }
                 } else if let actualError = error {
-                    //                    weakSelf.reloadListClosure()
+//                    weakSelf.reloadListClosure()
                     print("The Error :: \(actualError)")
                 }
             })
@@ -109,11 +111,20 @@ internal extension FactsViewModel {
         return ""
     }
     
-    func slowDownloadImage(_ strImageUrl: String) {
+    func getDownloadImage(_ strImageUrl:String, _ indexPath:IndexPath, handler: @escaping ImageDownloadHandler) {
         
+        downloadManager?.downloadImage(strImageUrl, indexPath: indexPath) { image, indexPath, error in
+            handler(image,indexPath,error)
+        }
+    }
+    
+    func slowDownloadImage(_ strImageUrl:String) {
+        downloadManager?.slowDownImageDownloadTaskfor(strImageUrl)
     }
     
     func refreshFactApi() {
-        
+        self.factData = nil
+        downloadManager?.cancelAll()
+        self.callFactsApi()
     }
 }

@@ -11,6 +11,7 @@ typealias ReloadClosure  = (() -> Void)
 
 protocol FactsViewModelProtocol: AnyObject {
     var factsApiService: FactsApiServicesProtocol? {get set}
+    var downloadManager: DownloadManagerImage? {get set}
     var factData: Facts? {get set}
     var reloadListClosure: ReloadClosure {get set}
     func callFactsApi()
@@ -18,6 +19,7 @@ protocol FactsViewModelProtocol: AnyObject {
     func getFactsDetailsTitle(_ index: Int) -> String
     func getFactsDetailsDesc(_ index: Int) -> String
     func getFactsImage(_ index: Int) -> String
+    func getDownloadImage(_ strImageUrl:String, _ indexPath:IndexPath, handler: @escaping ImageDownloadHandler)
     func slowDownloadImage(_ strImageUrl:String)
     func refreshFactApi()
     func getHeaderTitle() -> String

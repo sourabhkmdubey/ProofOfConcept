@@ -110,12 +110,11 @@ private extension FactViewController {
     
     // MARK: - Table view data source
      func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        // return the Facts Details Counts
         return self.viewModel?.numberOfFactsCount() ?? 0
     }
     
@@ -136,10 +135,25 @@ private extension FactViewController {
     //MARK:- Table view Delegate
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
+        if let strFactImageUrl = self.viewModel?.getFactsImage(indexPath.row) {
+            self.viewModel?.getDownloadImage(strFactImageUrl, indexPath, handler: { image, indexPath, error in
+                if error == nil, let factImage = image, let newIndexPath = indexPath {
+                    DispatchQueue.main.async {
+                        if let factCell = self.tableview.cellForRow(at: newIndexPath) as? FactTableViewCell {
+                            factCell.imgeView.image = factImage
+                        }
+                    }
+                }
+            })
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
+        if let strFactImageUrl = self.viewModel?.getFactsImage(indexPath.row) {
+            self.viewModel?.slowDownloadImage(strFactImageUrl)
+        }
     }
     
 }
