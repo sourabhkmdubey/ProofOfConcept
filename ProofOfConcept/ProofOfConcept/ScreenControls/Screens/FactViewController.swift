@@ -103,6 +103,7 @@ private extension FactViewController {
     }
     
     @objc func refreshFactApi() {
+        //refresh the fact api
         self.viewModel?.refreshFactApi()
     }
     
