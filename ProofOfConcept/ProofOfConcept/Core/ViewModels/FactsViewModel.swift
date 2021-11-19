@@ -112,7 +112,6 @@ internal extension FactsViewModel {
     }
     
     func getDownloadImage(_ strImageUrl:String, _ indexPath:IndexPath, handler: @escaping ImageDownloadHandler) {
-        
         downloadManager?.downloadImage(strImageUrl, indexPath: indexPath) { image, indexPath, error in
             handler(image,indexPath,error)
         }

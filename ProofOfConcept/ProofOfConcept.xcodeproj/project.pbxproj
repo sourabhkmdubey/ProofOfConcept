@@ -31,6 +31,8 @@
 		F80F896D2748174B009520F3 /* FactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F896C2748174B009520F3 /* FactsModel.swift */; };
 		F80F896F274824E4009520F3 /* DownloadManagerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F896E274824E4009520F3 /* DownloadManagerImage.swift */; };
 		F80F89712748251B009520F3 /* POCOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F89702748251B009520F3 /* POCOperation.swift */; };
+		F80F89742748345C009520F3 /* ApiClientTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F89722748345C009520F3 /* ApiClientTestCases.swift */; };
+		F80F89752748345C009520F3 /* TestFactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F89732748345C009520F3 /* TestFactsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		F80F896C2748174B009520F3 /* FactsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsModel.swift; sourceTree = "<group>"; };
 		F80F896E274824E4009520F3 /* DownloadManagerImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManagerImage.swift; sourceTree = "<group>"; };
 		F80F89702748251B009520F3 /* POCOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POCOperation.swift; sourceTree = "<group>"; };
+		F80F89722748345C009520F3 /* ApiClientTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClientTestCases.swift; sourceTree = "<group>"; };
+		F80F89732748345C009520F3 /* TestFactsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFactsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 		F80F89222747F791009520F3 /* ProofOfConceptTests */ = {
 			isa = PBXGroup;
 			children = (
+				F80F89722748345C009520F3 /* ApiClientTestCases.swift */,
+				F80F89732748345C009520F3 /* TestFactsViewModel.swift */,
 				F80F89232747F791009520F3 /* ProofOfConceptTests.swift */,
 				F80F89252747F791009520F3 /* Info.plist */,
 			);
@@ -452,7 +458,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80F89752748345C009520F3 /* TestFactsViewModel.swift in Sources */,
 				F80F89242747F791009520F3 /* ProofOfConceptTests.swift in Sources */,
+				F80F89742748345C009520F3 /* ApiClientTestCases.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,11 +623,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X3DGFZ3VA3;
 				INFOPLIST_FILE = ProofOfConcept/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Sourabh.ProofOfConcept;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sourabh.ProofOfConcept;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -634,11 +643,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X3DGFZ3VA3;
 				INFOPLIST_FILE = ProofOfConcept/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Sourabh.ProofOfConcept;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sourabh.ProofOfConcept;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

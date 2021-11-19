@@ -22,6 +22,7 @@ extension NavigationBarApperanceProtocol {
             viewcontroller.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
             viewcontroller.navigationController?.navigationBar.barTintColor = UIColor(named:"DarkBlue")
             viewcontroller.navigationController?.navigationBar.backItem?.backBarButtonItem?.tintColor = UIColor.white
+            viewcontroller.navigationController?.navigationBar.barStyle = .black
         }
         
     }
