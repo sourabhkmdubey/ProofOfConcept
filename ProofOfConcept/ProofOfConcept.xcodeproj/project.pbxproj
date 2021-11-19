@@ -29,6 +29,8 @@
 		F80F89692748110B009520F3 /* ApiClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F89652748110B009520F3 /* ApiClientProtocol.swift */; };
 		F80F896B2748169F009520F3 /* FactsApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F896A2748169F009520F3 /* FactsApiServices.swift */; };
 		F80F896D2748174B009520F3 /* FactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F896C2748174B009520F3 /* FactsModel.swift */; };
+		F80F896F274824E4009520F3 /* DownloadManagerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F896E274824E4009520F3 /* DownloadManagerImage.swift */; };
+		F80F89712748251B009520F3 /* POCOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F89702748251B009520F3 /* POCOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		F80F89652748110B009520F3 /* ApiClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClientProtocol.swift; sourceTree = "<group>"; };
 		F80F896A2748169F009520F3 /* FactsApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsApiServices.swift; sourceTree = "<group>"; };
 		F80F896C2748174B009520F3 /* FactsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsModel.swift; sourceTree = "<group>"; };
+		F80F896E274824E4009520F3 /* DownloadManagerImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManagerImage.swift; sourceTree = "<group>"; };
+		F80F89702748251B009520F3 /* POCOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POCOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 		F80F89482747FE04009520F3 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				F80F89702748251B009520F3 /* POCOperation.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 		F80F89492747FE10009520F3 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				F80F896E274824E4009520F3 /* DownloadManagerImage.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -419,6 +425,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80F89712748251B009520F3 /* POCOperation.swift in Sources */,
+				F80F896F274824E4009520F3 /* DownloadManagerImage.swift in Sources */,
 				F80F894F2748096A009520F3 /* FactViewController.swift in Sources */,
 				F80F895427480A61009520F3 /* FactTableViewCellProtocol.swift in Sources */,
 				F80F895727480A61009520F3 /* ScreenProtocol.swift in Sources */,
