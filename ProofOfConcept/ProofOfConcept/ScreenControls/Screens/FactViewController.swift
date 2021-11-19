@@ -31,7 +31,6 @@ class FactViewController: BaseViewController<FactsViewModel>, ScreenProtocol, Na
         self.configureScreenAfterLoad()
     }
     
-    
 }
 
 private extension FactViewController {

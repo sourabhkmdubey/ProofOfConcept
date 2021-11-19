@@ -35,9 +35,4 @@ class BaseViewController<DataProcessor: BaseViewModel>: UIViewController {
         
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
-    }
-
-
 }
