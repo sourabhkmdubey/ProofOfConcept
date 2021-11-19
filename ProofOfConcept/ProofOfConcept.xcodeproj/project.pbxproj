@@ -27,6 +27,8 @@
 		F80F89672748110B009520F3 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F89632748110B009520F3 /* ApiClient.swift */; };
 		F80F89682748110B009520F3 /* ApiEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F89642748110B009520F3 /* ApiEndPoint.swift */; };
 		F80F89692748110B009520F3 /* ApiClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F89652748110B009520F3 /* ApiClientProtocol.swift */; };
+		F80F896B2748169F009520F3 /* FactsApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F896A2748169F009520F3 /* FactsApiServices.swift */; };
+		F80F896D2748174B009520F3 /* FactsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F896C2748174B009520F3 /* FactsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		F80F89632748110B009520F3 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		F80F89642748110B009520F3 /* ApiEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiEndPoint.swift; sourceTree = "<group>"; };
 		F80F89652748110B009520F3 /* ApiClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClientProtocol.swift; sourceTree = "<group>"; };
+		F80F896A2748169F009520F3 /* FactsApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsApiServices.swift; sourceTree = "<group>"; };
+		F80F896C2748174B009520F3 /* FactsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +234,7 @@
 		F80F89452747FDC6009520F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F80F896C2748174B009520F3 /* FactsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 		F80F894A2747FE1A009520F3 /* ApiServices */ = {
 			isa = PBXGroup;
 			children = (
+				F80F896A2748169F009520F3 /* FactsApiServices.swift */,
 			);
 			path = ApiServices;
 			sourceTree = "<group>";
@@ -424,10 +430,12 @@
 				F80F89672748110B009520F3 /* ApiClient.swift in Sources */,
 				F80F895F27480C34009520F3 /* FactsViewModelProtocol.swift in Sources */,
 				F80F895B27480BBA009520F3 /* BaseViewModel.swift in Sources */,
+				F80F896D2748174B009520F3 /* FactsModel.swift in Sources */,
 				F80F895627480A61009520F3 /* NavigationBarApperanceProtocol.swift in Sources */,
 				F80F890D2747F78F009520F3 /* AppDelegate.swift in Sources */,
 				F80F89692748110B009520F3 /* ApiClientProtocol.swift in Sources */,
 				F80F89662748110B009520F3 /* ApiError.swift in Sources */,
+				F80F896B2748169F009520F3 /* FactsApiServices.swift in Sources */,
 				F80F894E2748096A009520F3 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
