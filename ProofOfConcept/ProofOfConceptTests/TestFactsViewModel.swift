@@ -110,23 +110,6 @@ class TestFactsViewModel: XCTestCase {
         waitForExpectations(timeout: 60 + 1, handler: nil)
     }
     
-    func testRefreshFactApi() {
-        
-        guard let viewModel = self.viewModel else { return }
-        //automatically call fact api in init
-        let expectation = self.expectation(description: "testRefreshFactApi")
-        viewModel.reloadListClosure = {
-            XCTAssertTrue(viewModel.factData != nil)
-            expectation.fulfill()
-        }
-        viewModel.errorClosure = { error in
-            XCTAssertTrue(error != nil)
-            expectation.fulfill()
-        }
-        viewModel.callFactsApi()
-        waitForExpectations(timeout: 60 + 1, handler: nil)
-    }
-    
     func testGetHeaderTitle() {
         
         guard let viewModel = self.viewModel else { return }
@@ -141,6 +124,21 @@ class TestFactsViewModel: XCTestCase {
             expectation.fulfill()
         }
         viewModel.callFactsApi()
+        waitForExpectations(timeout: 60 + 1, handler: nil)
+    }
+    
+    func testRefreshFactApi() {
+        guard let viewModel = self.viewModel else { return }
+        let expectation = self.expectation(description: "testRefreshFactApi")
+        viewModel.reloadListClosure = {
+            XCTAssertTrue(viewModel.factData != nil)
+            expectation.fulfill()
+        }
+        viewModel.errorClosure = { error in
+            XCTAssertTrue(error != nil)
+            expectation.fulfill()
+        }
+        viewModel.refreshFactApi()
         waitForExpectations(timeout: 60 + 1, handler: nil)
     }
     

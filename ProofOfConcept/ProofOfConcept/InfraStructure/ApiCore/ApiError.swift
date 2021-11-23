@@ -14,6 +14,7 @@ enum APIError: Error {
     case noDataFromServer
     case notDataIsParsed
     case resourceNotFound
+    case noInternetConnection
 }
 extension APIError: LocalizedError {
     
@@ -26,9 +27,11 @@ extension APIError: LocalizedError {
         case .noconverionOfData:
             return "Data is not in correct format."
         case .notDataIsParsed:
-            return "Not able to parse the data"
+            return "Not able to parse the data."
         case .noDataFromServer:
-             return "No data is returned from server"
+             return "No data is returned from server."
+        case .noInternetConnection:
+            return "The Internet Connection appears to be offline."
         case .resourceNotFound:
             return "404 Not Found"
         }

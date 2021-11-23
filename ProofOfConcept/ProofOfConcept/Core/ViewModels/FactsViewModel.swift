@@ -125,8 +125,12 @@ internal extension FactsViewModel {
     }
     
     func refreshFactApi() {
-        self.factData = nil
-        downloadManager?.cancelAll()
-        self.callFactsApi()
+        if Reachability.isConnectedToNetwork() {
+            downloadManager?.cancelAll()
+            self.callFactsApi()
+        }else {
+            self.errorClosure(APIError.noInternetConnection)
+        }
+        
     }
 }

@@ -34,6 +34,7 @@
 		F80F89742748345C009520F3 /* ApiClientTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F89722748345C009520F3 /* ApiClientTestCases.swift */; };
 		F80F89752748345C009520F3 /* TestFactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80F89732748345C009520F3 /* TestFactsViewModel.swift */; };
 		F828DD08274CF1E200DCC406 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F828DD07274CF1E200DCC406 /* HTTPStatus.swift */; };
+		F87C3E36274D564C000ADDAC /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87C3E35274D564C000ADDAC /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		F80F89722748345C009520F3 /* ApiClientTestCases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClientTestCases.swift; sourceTree = "<group>"; };
 		F80F89732748345C009520F3 /* TestFactsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFactsViewModel.swift; sourceTree = "<group>"; };
 		F828DD07274CF1E200DCC406 /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
+		F87C3E35274D564C000ADDAC /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 		F80F89482747FE04009520F3 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				F87C3E35274D564C000ADDAC /* Reachability.swift */,
 				F80F89702748251B009520F3 /* POCOperation.swift */,
 			);
 			path = Utility;
@@ -452,6 +455,7 @@
 				F80F890D2747F78F009520F3 /* AppDelegate.swift in Sources */,
 				F80F89692748110B009520F3 /* ApiClientProtocol.swift in Sources */,
 				F80F89662748110B009520F3 /* ApiError.swift in Sources */,
+				F87C3E36274D564C000ADDAC /* Reachability.swift in Sources */,
 				F80F896B2748169F009520F3 /* FactsApiServices.swift in Sources */,
 				F80F894E2748096A009520F3 /* BaseViewController.swift in Sources */,
 				F828DD08274CF1E200DCC406 /* HTTPStatus.swift in Sources */,
