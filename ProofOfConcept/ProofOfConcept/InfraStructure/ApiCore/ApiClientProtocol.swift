@@ -9,4 +9,19 @@ import Foundation
 
 protocol ApiClientProtocol {
     func hitAPI<T:Decodable>(with urlRequest: URLRequest, responseType: T.Type, completion: @escaping (T?,Error?)->())
+    func handleResponse<T:Decodable>(status: Int,
+                        data: Data?,
+                        error: Error?,
+                        responseType: T.Type,
+                        completion: @escaping (T?, Error?) -> Void)
 }
+
+
+
+
+
+
+
+
+
+

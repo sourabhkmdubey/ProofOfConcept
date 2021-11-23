@@ -8,12 +8,14 @@
 import Foundation
 
 typealias ReloadClosure  = (() -> Void)
+typealias ErrorClosure  = ((_ error:Error?) -> Void)
 
 protocol FactsViewModelProtocol: AnyObject {
     var factsApiService: FactsApiServicesProtocol? {get set}
     var downloadManager: DownloadManagerImage? {get set}
     var factData: Facts? {get set}
     var reloadListClosure: ReloadClosure {get set}
+    var errorClosure: ErrorClosure {get set}
     func callFactsApi()
     func numberOfFactsCount() -> Int
     func getFactsDetailsTitle(_ index: Int) -> String

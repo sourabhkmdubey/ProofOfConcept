@@ -23,10 +23,14 @@ final class FactsApiServices: FactsApiServicesProtocol {
     //Fetch The fact Data
     func getFactsData(completion: @escaping (Facts?,Error?)->()) {
         guard let apiClient = self.apiClient else {
+            completion(nil, APIError.somthingWentWrong)
             return
         }
-        let url = URL(string: ApiEndPoint.Facts.facts)
-        let urlRequest = URLRequest(url: url!)
+        guard let url = URL(string: ApiEndPoint.Facts.facts) else {
+            completion(nil, APIError.resourceNotFound)
+            return
+        }
+        let urlRequest = URLRequest(url: url)
         apiClient.hitAPI(with: urlRequest, responseType: Facts.self, completion: completion)
     }
     

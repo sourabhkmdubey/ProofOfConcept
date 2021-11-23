@@ -17,13 +17,16 @@ final class FactsViewModel: BaseViewModel, FactsViewModelProtocol {
     var reloadListClosure: ReloadClosure = { () in
         //reload The Data
     }
+    var errorClosure: ErrorClosure  = { (_ ) in
+        //show error on ViewController
+    }
     
     //MARK:- Initilizer Methods
     override init() {
         super.init()
         self.factsApiService = FactsApiServices.init();
         self.downloadManager = DownloadManagerImage.init()
-        self.callFactsApi()
+//        self.callFactsApi()
     }
     
 }
@@ -64,8 +67,8 @@ internal extension FactsViewModel {
                         }
                     }
                 } else if let actualError = error {
-//                    weakSelf.reloadListClosure()
-                    print("The Error :: \(actualError)")
+                    weakSelf.errorClosure(actualError)
+                    print("The Error :: \(actualError.localizedDescription)")
                 }
             })
         }

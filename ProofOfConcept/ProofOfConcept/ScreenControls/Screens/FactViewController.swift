@@ -75,17 +75,37 @@ private extension FactViewController {
         }
     }
     
+    private func showErrorOnView() {
+        if let viewModel = self.viewModel {
+            viewModel.errorClosure = { [weak self] (error) in
+                guard let weakSelf = self else {return}
+                DispatchQueue.main.async {
+                    guard let error = error else {return}
+                    weakSelf.showErrorAlertView(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
     private func addBarButtonToNavigation() {
-
         let refreshButton = UIBarButtonItem(title: "refresh", style: .plain, target: self, action: #selector(refreshFactApi))
         refreshButton.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItem  = refreshButton
     }
     
+    private func showErrorAlertView(_ strMessage:String) {
+        let strTitle = NSLocalizedString("Error", comment: "")
+        let strMessage = NSLocalizedString("\(strMessage)", comment: "Error Message")
+        let strDone = NSLocalizedString("OK", comment: "OK Button")
+        let alertViewcontroller = UIAlertController.init(title: strTitle, message: strMessage, preferredStyle: .alert)
+        let actionButton = UIAlertAction.init(title: strDone, style: .cancel, handler: nil)
+        alertViewcontroller.addAction(actionButton)
+        self.present(alertViewcontroller, animated: true, completion: nil)
+    }
     
 }
 
- extension FactViewController: UITableViewDataSource, UITableViewDelegate {
+extension FactViewController: UITableViewDataSource, UITableViewDelegate {
     //MARK:- Internal Methods
     
     // Configuere Screen On Load
@@ -98,8 +118,10 @@ private extension FactViewController {
     func configureScreenAfterLoad() {
         self.configureTableView()
         self.setUpViewModel()
+        self.showErrorOnView()
         self.reloadTheTableView()
         self.addBarButtonToNavigation()
+        self.viewModel?.callFactsApi()
     }
     
     @objc func refreshFactApi() {
@@ -109,17 +131,17 @@ private extension FactViewController {
     
     
     // MARK: - Table view data source
-     func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // return the Facts Details Counts
         return self.viewModel?.numberOfFactsCount() ?? 0
     }
     
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let factCell = self.tableview.dequeueReusableCell(withIdentifier: self.cellReuseIdentifier, for: indexPath) as? FactTableViewCell else {
             fatalError("cell Not found")
         }

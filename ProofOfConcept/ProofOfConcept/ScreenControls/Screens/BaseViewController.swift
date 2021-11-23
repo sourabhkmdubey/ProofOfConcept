@@ -10,6 +10,10 @@ import UIKit
 class BaseViewController<DataProcessor: BaseViewModel>: UIViewController {
 
     //MARK:- Life Cycle Methods
+    override func loadView() {
+        super.loadView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,14 +29,14 @@ class BaseViewController<DataProcessor: BaseViewModel>: UIViewController {
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated);
-        
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated);
-        
-    }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated);
+//
+//    }
+//
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated);
+//
+//    }
     
 }
